@@ -1,0 +1,338 @@
+:root {
+    --main-padding: 20px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #37288c;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.2fr 1fr 1.2fr 1fr 0.2fr;
+    grid-template-areas:
+        "name nav"
+        "picture about"
+        "skills projects"
+        "education experience"
+        "footer footer";
+    padding: 10px;
+    min-height: 100vh;
+    width: 100vw;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+
+
+}
+
+#education,
+#experience,
+#footer,
+#skills,
+#projects,
+#about,
+#picture,
+#nav,
+#name {
+    background-color: #5d81c154;
+}
+
+
+#name {
+    grid-area: name;
+    padding: var(--main-padding);
+    display: grid;
+    justify-content: left;
+    align-items: center;
+}
+
+#nav {
+    grid-area: nav;
+    padding: var(--main-padding);
+
+    display: grid;
+    place-items: center;
+
+}
+
+.dispalySections
+{
+    display: contents;
+}
+
+nav {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 113px;
+}
+
+nav a:hover {
+    background: palegreen;
+
+}
+
+#picture {
+    grid-area: picture;
+    padding: var(--main-padding);
+    display: grid;
+    justify-content: left;
+    align-items: left;
+    background-color: #5d81c154;
+
+
+}
+
+.mainProfile
+{
+    background-color: #5d81c154;
+}
+
+#about {
+    grid-area: about;
+    padding: var(--main-padding);
+
+}
+
+#skills {
+    grid-area: skills;
+
+    padding: var(--main-padding);
+
+}
+
+#projects {
+    grid-area: projects;
+    padding: var(--main-padding)
+}
+
+.libImg {
+    width: 170px;
+}
+
+
+#education {
+    grid-area: education;
+    padding: var(--main-padding)
+}
+
+#experience {
+    grid-area: experience;
+    padding: var(--main-padding)
+}
+
+#footer {
+    grid-area: footer;
+    padding: var(--main-padding);
+    text-align: center;
+
+}
+
+.phoneImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.profileImage {
+    width: 309px;
+    padding:5%;
+}
+
+.location {
+    display: grid;
+    gap: 8px;
+}
+
+.locationImg {
+    width: 45px;
+}
+
+.locPara {
+    font-size: 16px;
+}
+
+
+.phone-Info {
+    display: grid;
+    gap: 8px;
+}
+
+.phone-icon {
+    width: 45px;
+}
+
+.phone-number {
+    font-size: 16px;
+}
+
+
+
+.skillbar {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.skillbarlabel {
+    width: 180px;
+    text-align: left;
+}
+
+progress {
+    width: 318px;
+}
+
+.projectdetails {
+    padding-left: 15px;
+    width: 77%;
+    display: inline-block;
+}
+
+.project1 {
+   width: 100%;
+   overflow: hidden;
+}
+
+.proStyle
+{
+    margin-bottom: 16%;
+}
+
+.projectImage
+{
+    display: inline-block;
+    width: 20%;
+}
+
+.machinelearningImg {
+
+    width: 170px;
+    height: 120px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+#name {
+    padding-top: 23px;
+}
+
+h2,
+nav {
+    margin-block-start: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+
+
+
+    .container {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr;
+        grid-template-areas:
+            "name nav"
+            "picture picture"
+            "about about"
+            "skills skills"
+            "projects projects"
+            "education experience"
+            "footer footer"
+        ;
+
+
+
+
+        height: auto;
+        min-height: 100vh;
+        color: var(--dark);
+    }
+
+    #education,
+    #experience,
+    #footer,
+    #skills,
+    #projects,
+    #about,
+    #picture,
+    #nav,
+    #name {
+        background-color: #5d81c154;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 16px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    
+    .innerNav
+    {
+        display: inline-block;
+    }
+
+
+    #nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: auto;
+        scrollbar-color: black black;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    #nav::-webkit-scrollbar {
+        height: 12px;
+        background: transparent;
+    }
+
+    #nav::-webkit-scrollbar-track {
+        background: black;
+        border-bottom: 3px solid black;
+    }
+
+    #nav::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+
+    #nav:hover::-webkit-scrollbar {
+        display: block !important;
+        opacity: 1 !important;
+    }
+
+    #nav::-webkit-scrollbar-thumb:hover {
+        background: black;
+    }
+
+
+
+}
