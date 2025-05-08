@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gujju Pooja Reddy - Protfolio/title> </title>
+    <title>Gujju Pooja Reddy - Portfolio</title>
+
 
     <link rel="stylesheet" href="style.css">
 
@@ -18,15 +19,17 @@
             <div id="name"><h2><u>Pooja Reddy Gujju</u></h2></div>
 
             <div id="nav">
-                <nav class="innerNav">
-                    <u> <a href="#about">About</a></u>
-                    <u> <a href="#skills">Skills</a></u>
-                    <u><a href="#projects">Projects</a></u>
-                    <u> <a href="#education">Education</a></u>
-                    <u><a href="#experience">Experience</a></u>
-                    <u><a href="#footer">Contact</a> </u>
-                </nav>
-            </div>
+                <button class="hamburger" onclick="toggleNav()">☰</button>
+                <div id="navLinks" class="innerNav">
+                  <a href="#about">About</a>
+                  <a href="#skills">Skills</a>
+                  <a href="#projects">Projects</a>
+                  <a href="#education">Education</a>
+                  <a href="#experience">Experience</a>
+                  <a href="#footer">Contact</a>
+                </div>
+              </div>
+              
         </header>
         <section class="dispalySections">
             <div class="mainProfile"><img class="profileImage" src="./images/userprofile.png" alt="Profile Picture">
@@ -187,6 +190,13 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        function toggleNav() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+    </script>
+    
 
 </body>
 

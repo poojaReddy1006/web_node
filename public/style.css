@@ -243,11 +243,56 @@ a {
     text-decoration: none;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #37288c;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
 
 @media only screen and (max-width: 500px) {
 
+    .innerNav {
+        display: none; 
+
+    }
+    
+    #navLinks.show {
+        display: grid;
+    }
+    
 
 
+    .hamburger {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        grid-auto-flow: row;
+        background-color: #5d81c154;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        z-index: 999;
+    }
+
+    #navLinks.show {
+        display:  grid;
+    }
+
+    .innerNav a {
+        padding: 10px;
+        font-size: 18px;
+        text-decoration: none;
+    }
 
     .container {
 
